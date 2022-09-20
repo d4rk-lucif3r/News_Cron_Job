@@ -1,0 +1,8 @@
+/__pycache__
+*.pyc
+*.json
+*.log
+/assets/*.json
+!/assets/config.json 
+
+.vercel
