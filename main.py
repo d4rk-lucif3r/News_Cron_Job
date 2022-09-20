@@ -14,4 +14,6 @@ engine = create_engine('mysql+pymysql://{}:{}@{}/{}'.format(
     ), connect_args=ssl_args)
 
 if __name__ == '__main__':
+    print("Getting news")
     get_news(engine)
+    
