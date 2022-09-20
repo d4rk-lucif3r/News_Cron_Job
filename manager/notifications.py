@@ -36,5 +36,4 @@ def update_notifications(engine) -> dict:
         except Exception as error:
             notifications = []
             warning_log(error)
-    # print(tmpdir,'/notifications.json')
     return notifications

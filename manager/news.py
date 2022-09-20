@@ -12,7 +12,7 @@ tmp_dir = tempfile.gettempdir()
 def get_news(engine) -> None:
     """
     This function fetches the weather data from newssapi using
-    api key provided in "config.json" and stores the data in 
+    api key provided in env and stores the data in 
     "news.json" 
     New Notification and info log is created each time new data is fetched
     """
@@ -43,13 +43,4 @@ def get_news(engine) -> None:
     with open('./news.json', 'w') as news_file:
         json.dump(new_news, news_file, indent=2)
 
-def clearNews():
-    """
-    This function is responsible for clearing data in
-    "news.json" each time reset butoon on UI 
-    is pressed
-    """
-    clearAllNews = []
-    with open('assets/news.json', 'w') as news_file:
-        json.dump(clearAllNews, news_file, indent=2)
 
